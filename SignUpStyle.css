@@ -1,0 +1,68 @@
+body {
+    background-color: #3C3F41;
+    overflow: hidden;
+    
+}
+.a {
+    height: 300px;
+    width: 500px;
+    background-color: #2C2F31;
+    float: left;
+    margin-top: 180;
+    margin-left: 120px;
+    border-radius: 15px;
+}
+.b {
+    height: 300px;
+    width: 500px;
+    background-color: #2C2F31;
+    float: right;
+    margin-top: 180;
+    margin-right: 120px;
+    border-radius: 15px;
+
+}
+.Divtitle {
+    text-align:center;
+    margin-top: 10px;
+    font-size: 30px;
+    font-family:cursive;
+    margin-bottom: 0px;
+}
+textarea {
+    margin-left: 120px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+}
+input {
+    margin-left: 20%;
+    width: 60%;
+    height: 35px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-family:cursive;
+    border: none;
+    background-color: #6C6F71;
+    padding-left: 10px;
+    outline: none;
+}
+.submit {
+    height: 43px;
+}
+input::-webkit-input-placeholder {
+    color: #4C4F51;
+}
+input::-moz-placeholder{
+    color: #4C4F51;
+}
+.login {
+    margin-top: 30px;
+}
+.password {
+    margin-top: 20px;
+    margin-bottom: 10;
+}
+.Submit {
+    margin-top: 40px;
+    cursor: pointer;
+}

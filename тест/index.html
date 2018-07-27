@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Lol</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <form name="formm">
+        <textarea id="teext"></textarea>
+        <button id="but">Send</button>
+    </form>
+    <div id="out"></div>
+    
+    
+    <script>
+    
+    var a = '';
+    document.getElementById('but').addEventListener('click',func);
+        
+    function func() {
+        alert(document.getElementById('teext').value);
+        document.getElementById('out').innerHTML(a);
+    }
+    
+    </script>
+</body>   
+</html>
