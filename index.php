@@ -32,7 +32,6 @@
            Написать
         </button>
         <div id='CPost' class="containerPost">
-            <div class='post' id='Post40'><div class='postHead'><strong>SOOQA</strong></div><div class='textCont'>HELOOOOO</div><div class='postUnder'>Дата: Автор:какойто чел.<div class = 'PostUnderDel' id = 'PostUnderDel40'>Удалить</div></div></div>
         </div>
         <div class="menuLine">
                 <a href="SignUp.php">

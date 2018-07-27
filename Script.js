@@ -18,6 +18,7 @@ function funcB(){
 };
 function funcS(data){
     $("#CPost").append(data);
+    EventsDel();
 };
 function EventsDel(){
         $(".Post").mouseover(function(event){
@@ -34,9 +35,10 @@ function EventsDel(){
                     $(this).css('margin-bottom', '45');
                 }
             });
+        $(".PostUnderDel").click(function(event){
+            
+        });
     };
-
-EventsDel();
 
 $(document).ready(function(){
     PopUpHide();
@@ -48,8 +50,6 @@ $(document).ready(function(){
         beforeSend: funcB, 
         success: funcS
     });
-    
-    EventsDel();
     
     {
         $(window).scroll(function() {
@@ -68,6 +68,5 @@ $(document).ready(function(){
     $("#NewPostButton").click(PopUpShow);
     $("#CloseForm").click(PopUpHide);
 });
-EventsDel();
 
 
