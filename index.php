@@ -3,6 +3,8 @@
     <title>Lol</title>
     <meta charset="utf8_general_ci">
     <link href="style.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="Script.js"></script>
 </head>
 <body>
     <p><a name="top"></a></p>
@@ -30,39 +32,7 @@
            Написать
         </button>
         <div id='CPost' class="containerPost">
-            <?php
-            
-            function printRes ($result){
-            $cont = "";
-                while(($row = $result->fetch_assoc()) != false) {
-                    $cont = "<div class='post' id='Post".$row['id']."'><div class='postHead'><strong>".$row["name"]."</strong></div><div class='textCont'>".$row["content"]."</div><div class='postUnder'>Дата: ".$row["date"].". Автор:какойто чел.<div class = 'PostUnderDel' id = 'PostUnderDel".$row['id']."'>Удалить</div></div></div>".$cont;
-                } echo $cont;
-            } 
-            if(isset($_POST["done"])){
-        if($_POST["name"] != "" AND $_POST["PostText"] != ""){
-            $sql = new mysqli("localhost","root", "", "Posts");
-            $sql->query ("SET NAMES 'UTF8'");
-
-            $sql->query ("INSERT INTO  `poststab` (
-                `id` ,
-                `name` ,
-                `content` ,
-                `date`
-                )
-                VALUES (
-                NULL , '".$_POST["name"]."',  '".$_POST["PostText"]."', 
-                CURRENT_TIMESTAMP
-                );");
-            $sql->close();
-        }
-    }/*Отправили данные*/
-            
-            $sql = new mysqli("localhost","root", "", "Posts");
-            $sql->query ("SET NAMES 'UTF8'");
-            $result = $sql->query("SELECT * FROM poststab");
-            printRes($result);/*Вывод результата*/
-            $sql->close();
-            ?>
+            <div class='post' id='Post40'><div class='postHead'><strong>SOOQA</strong></div><div class='textCont'>HELOOOOO</div><div class='postUnder'>Дата: Автор:какойто чел.<div class = 'PostUnderDel' id = 'PostUnderDel40'>Удалить</div></div></div>
         </div>
         <div class="menuLine">
                 <a href="SignUp.php">
@@ -87,15 +57,12 @@
                             
             </div>
             
-        <input type="submit" id='idPostSend' name="done" class="PostSend" value="Отправить">
+        <input type="button" id='idPostSend' name="done" class="PostSend" value="Отправить">
             
         </form>
         
         
     </div> <!--Закрытие FORM-->
-        
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script src="Script.js"></script>
 
 </body>   
 </html>

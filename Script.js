@@ -3,21 +3,55 @@ var postValue = '';
 var postTitle = '';
 var CPstyle = '';
 
-$(document).ready(function(){PopUpHide()});
-        function PopUpShow(){
+function PopUpShow(){
             $("#lol").show();
             $(document).css('overflow', 'hidden');
-                }
-        function PopUpHide(){
+                };
+function PopUpHide(){
             $("#lol").hide();
-//            document.getElementById('idPostName').value = '';
             $('#idPostText').value = '';
             $(document).css('overflow', 'auto');
             
-        }
-        CPstyle = getComputedStyle(document.querySelector('.containerPost'));
-        document.querySelector('.menuLine').style.height = CPstyle.height;
-        {
+        };
+function funcB(){
+//    $("#CPost").html("Ожидание загрузки постов...");
+};
+function funcS(data){
+    $("#CPost").append(data);
+};
+function EventsDel(){
+        $(".Post").mouseover(function(event){
+    if(event.target.getAttribute("id") != null){
+        var $PostNum = "#PostUnderDel" + event.target.getAttribute("id").substring(4);
+        $($PostNum).css('display', 'block');
+        $(this).css('margin-bottom', "27");
+    }
+});
+        $(".Post").mouseleave(function(event){
+                if(event.target.getAttribute("id") != null){
+                    var $PostNum = "#PostUnderDel" + event.target.getAttribute("id").substring(4);
+                    $($PostNum).css('display', 'none');
+                    $(this).css('margin-bottom', '45');
+                }
+            });
+    };
+
+EventsDel();
+
+$(document).ready(function(){
+    PopUpHide();
+    $.ajax ({                  
+        url: "Posting.php",       
+        type:"POST",            
+        data: ({}),   
+        dataType: "html",       
+        beforeSend: funcB, 
+        success: funcS
+    });
+    
+    EventsDel();
+    
+    {
         $(window).scroll(function() {
             if ($(this).scrollTop() > 500) {
                $('.anchor').show();
@@ -30,21 +64,10 @@ $(document).ready(function(){PopUpHide()});
                 $('.anchor').hide();
             }
         );} /*Якорь*/
-
-$("#NewPostButton").click(PopUpShow);
-$("#CloseForm").click(PopUpHide);
-
-$(".Post").mouseover(function(event){
-    if(event.target.getAttribute("id") != null){
-        var $PostNum = "#PostUnderDel" + event.target.getAttribute("id").substring(4);
-        $($PostNum).css('display', 'block');
-        $(this).css('margin-bottom', "27");
-    }
+    
+    $("#NewPostButton").click(PopUpShow);
+    $("#CloseForm").click(PopUpHide);
 });
-$(".Post").mouseleave(function(event){
-                if(event.target.getAttribute("id") != null){
-                    var $PostNum = "#PostUnderDel" + event.target.getAttribute("id").substring(4);
-                    $($PostNum).css('display', 'none');
-                    $(this).css('margin-bottom', '45');
-                }
-            });
+EventsDel();
+
+
