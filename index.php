@@ -50,7 +50,7 @@
             <hr>
             
             <div class="formInp">
-                <textarea id='idPostName' name="name" class="themeName" rows="2" cols="87" placeholder="Тема поста" maxlength="40"></textarea>
+                <textarea id='idPostName' name="name" class="themeName" rows="2" cols="87" placeholder="Тема поста" maxlength="40" autofocus></textarea>
                 
                 <textarea id='idPostText' name="PostText" class="PostText" cols="87" rows="6" placeholder="Введите текст..." maxlength="400"></textarea>
                             
