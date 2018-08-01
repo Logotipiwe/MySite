@@ -2,9 +2,9 @@
 <head>
     <title>Lol</title>
     <meta charset="utf8_general_ci">
-    <link href="style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script src="Script.js"></script>
+    <script src="js/Script.js"></script>
 </head>
 <body>
     <p><a name="top"></a></p>
@@ -12,9 +12,9 @@
     <header><div class="containerHead">
         <nav>
             <ul>
-                <li><a href="">Здесь</a></li>
-                <li><a href="">Какаято</a></li>
-                <li><a href="">Шапка</a></li>
+                <li><a href="Index.html">Здесь</a></li>
+                <li><a href="Index.html">Какаято</a></li>
+                <li><a href="Index.html">Шапка</a></li>
             </ul>
         </nav>
     </div>

@@ -2,11 +2,11 @@
     <head>
         <title>Вход</title>
         <meta charset="utf-8">
-        <link href="SignUpStyle.css" rel="stylesheet">
+        <link href="css/SignUpStyle.css" rel="stylesheet">
     </head>
     
     <body>
-        <p><a href="index.php">Ссылка</a></p>
+        <p><a href="Index.html">Ссылка</a></p>
         <div class="a">
             <div class="Divtitle">Войти</div>
             <form>

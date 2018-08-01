@@ -22,25 +22,28 @@ function funcS(data){
     EventsDel();
 };
 function EventsDel(){
-        $(".Post").mouseover(function(event){
+    $(".Post").mousemove(function(event){
             if(event.target.getAttribute("id") != null){
                 var $PostNum = "#PostUnderDel" + event.target.getAttribute("id").substring(4);
                 $($PostNum).css('display', 'block');
                 $(this).css('margin-bottom', "27");
             }
         });
-        $(".Post").mouseleave(function(event){
+    $(".Post").mouseleave(function(event){
             if(event.target.getAttribute("id") != null){
                 var $PostNum = "#PostUnderDel" + event.target.getAttribute("id").substring(4);
                 $($PostNum).css('display', 'none');
                 $(this).css('margin-bottom', '45');
             }
         });
-        $(".PostUnderDel").click(function(event){
-            var item = event.target.getAttribute("id").substring(12);
-            AjaxUse(2,item);
-        });
-    };
+    
+    
+    
+    $(".PostUnderDel").click(function(event){
+        var item = event.target.getAttribute("id").substring(12);
+        AjaxUse(2,item);
+    });
+};
 function AjaxUse(num,id){
     var postTitle = $("#idPostName").val();
     var postValue = $("#idPostText").val();
@@ -49,7 +52,7 @@ function AjaxUse(num,id){
         type: "POST",
         data: ({action: num, title: postTitle, content: postValue, item: id}),   
         dataType: "html",       
-        beforeSend: funcB, 
+//        beforeSend: funcB, 
         success: funcS
     });
     PopUpHide();
