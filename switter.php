@@ -4,11 +4,11 @@
     <meta charset="utf8_general_ci">
     <link href="css/style.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-    <script src="js/Script.js"></script>
+    <script src="js/switterScript.js"></script>
 </head>
 <body>
     <p><a name="top"></a></p>
-    <img class="FonImg" src="img/FonProz35.png">
+    <img class="FonImg" src="css/img/FonProz35.png">
     <header><div class="containerHead">
         <nav>
             <ul>
@@ -44,7 +44,7 @@
         <form class="ClassFormm" action="" method="post">
             <div class='formHead'>
                 Новый пост
-            <img id='CloseForm' class="exit" src="img/exit.png">
+            <img id='CloseForm' class="exit" src="css/img/exit.png">
             </div>
             
             <hr>

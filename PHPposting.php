@@ -10,9 +10,9 @@ function printRes ($result){
 
 if($_POST["action"] == 1){
         if($_POST["title"] != "" AND $_POST["content"] != ""){
-            $sql = new mysqli("localhost","root", "", "Posts");
+            $sql = new mysqli("localhost","root", "", "logotipiwe");
             $sql->query ("SET NAMES 'UTF8'");
-            $sql->query ("INSERT INTO  `poststab` (
+            $sql->query ("INSERT INTO  `Switterposts` (
                 `id` ,
                 `name` ,
                 `content` ,
@@ -24,17 +24,17 @@ if($_POST["action"] == 1){
                 );");
             $sql->close();
         }
-    }/*Отправили данные*/
+    }/*Отправили данные добавить пост*/
 if($_POST["action"] == 2){
-    $sql = new mysqli("localhost","root", "", "Posts");
+    $sql = new mysqli("localhost","root", "", "logotipiwe");
             $sql->query ("SET NAMES 'UTF8'");
-            $sql->query ("DELETE FROM  `poststab` WHERE  `poststab`.`id` =".$_POST["item"].";");
+            $sql->query ("DELETE FROM  `Switterposts` WHERE  `Switterposts`.`id` =".$_POST["item"].";");
             $sql->close();
-}
+} /*Отправили данные удалить пост*/
             
-            $sql = new mysqli("localhost","root", "", "Posts");
+            $sql = new mysqli("localhost","root", "", "logotipiwe");
             $sql->query ("SET NAMES 'UTF8'");
-            $result = $sql->query("SELECT * FROM poststab");
+            $result = $sql->query("SELECT * FROM Switterposts");
             printRes($result);/*Вывод результата*/
             $sql->close();
 ?>

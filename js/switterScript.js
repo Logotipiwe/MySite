@@ -1,8 +1,3 @@
-//var post = '';
-//var postValue = '';
-//var postTitle = '';
-//var CPstyle = '';
-
 function PopUpShow(){
             $("#lol").show();
             $(document).css('overflow', 'hidden');
@@ -14,9 +9,6 @@ function PopUpHide(){
             $(document).css('overflow', 'auto');
             
         };
-function funcB(){
-//    $("#CPost").html("Ожидание загрузки постов...");
-};
 function funcS(data){
     $("#CPost").html(data);
     EventsDel();
@@ -48,11 +40,10 @@ function AjaxUse(num,id){
     var postTitle = $("#idPostName").val();
     var postValue = $("#idPostText").val();
     $.ajax ({                  
-        url: "Posting.php",
+        url: "PHPposting.php",
         type: "POST",
         data: ({action: num, title: postTitle, content: postValue, item: id}),   
         dataType: "html",       
-//        beforeSend: funcB, 
         success: funcS
     });
     PopUpHide();
