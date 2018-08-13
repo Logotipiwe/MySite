@@ -3,6 +3,22 @@ body {
     overflow: hidden;
     
 }
+.head{
+    height: 50px;
+    width: 100%;
+    color: black;
+    font-size: 23px;
+    
+}
+.head a {
+    color: inherit;
+}
+.link {
+    float: left;
+}
+.log_in {
+    float: right;
+}
 .a {
     height: 300px;
     width: 500px;
