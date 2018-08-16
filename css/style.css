@@ -15,37 +15,29 @@ header {
     background-color: #1D1F21;
     height: 50px;
 }
-header a {
-    text-decoration: none;
-    font-family:fantasy
-}
-nav {
-    padding-top: 0px;
+.log_in {
+    float: right;
+    margin: 13px 25px 0 0;
+    
     font-size: 20px;
-    margin-left: 150px;
-    width: 800px;
+    color: white;
+    
 }
-nav ul {
+.log_in a {
+    font-family: inherit;
+    color: inherit;
+}
+.to_index{
+    margin: 13px 0 0 25px;
+    font-size: 20px;
+    color: white;
+    float: left;
+}
+.to_index a{
+    font-family: inherit;
+    color: inherit;
+}
 
-    list-style: none;
-    padding: 0px;
-}
-nav li {
-    display: inline-block;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 13px;
-    padding-top: 14px;
-    transition: .3s linear;
-    border-radius: 0px 0px 20px 20px;
-    width: 100px;
-    text-align: center;
-}
-nav a {
-    color: aliceblue;
-}
-nav li:hover {
-    background-color: #A6A7A8;
 }
 /*-----------------------------КОНЕЦ HEADER*/
 /*-----------------------------НАЧАЛО MAIN*/

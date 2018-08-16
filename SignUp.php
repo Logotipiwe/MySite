@@ -6,26 +6,32 @@
     </head>
     
     <body>
-        <p><a href="Index.html">Ссылка</a></p>
+        <div class="head">
+            <div class='link'><a href="Index.php">На главную</a></div>
+            <div class="log_in">
+                <?
+                if($_COOKIE['login']!=''){
+                    echo "Вы вошли, как ".$_COOKIE['login']." | <a href='PHPlogout.php'>Выйти</a>";
+                }
+                ?>
+            </div>
+        </div>
         <div class="a">
             <div class="Divtitle">Войти</div>
-            <form>
-                    <input class="login" type="text" placeholder="Логин" autofocus>
-                    <input class="password" type="password" placeholder="Пароль">
-                    <input class="submit" id="loles" type="submit" value="Войти">
+            <form method="post" action="PHPsignin.php">
+                    <input name="InLogin" class="login" type="text" placeholder="Логин" autofocus>
+                    <input name="InPassword" class="password" type="text" placeholder="Пароль">
+                    <input class="submit" type="submit" value="Войти">
             </form>
         </div>
         <div class="b">
             <div class="Divtitle">Зарегистрироваться</div>
-            <form>
-                    <input class="login" type="text" placeholder="Логин">
-                    <input class="password" type="password" placeholder="Пароль">
+            <form method="post" action="PHPsignup.php">
+                    <input name='Reglogin'class="login" type="text" placeholder="Логин">
+                    <input name='Regpassword' class="password" type="text" placeholder="Пароль">
                     <input class="submit" type="submit" value="Зарегистрироваться">
             </form>
         </div>
-        <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
-        <script>
-            
-        </script>
+        <script src="http://logotipiwe/Jquery.js"></script>
     </body>
 </html>

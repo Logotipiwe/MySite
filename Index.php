@@ -6,6 +6,15 @@
     </head>
     
     <body>
+        <div class="header2">
+            <div class="log_in">
+                <?
+                if($_COOKIE['login']!='') {
+                    echo "Вы вошли как ".$_COOKIE['login']." | <a href='PHPlogout.php'>Выйти</a>";
+                }                
+                ?>
+            </div>
+        </div>
         <header></header>
         <main>
             <div class="zag"></div>
@@ -37,5 +46,15 @@
                 </li>
             </ul>            
         </main>
+        <script src="http://logotipiwe/Jquery.js"></script>
+        <script>
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 393){
+                    $('.header2').css('background-image', 'url(css/img/header2.png)')
+                } else { 
+                    $('.header2').css('background-image', 'none')
+                }
+            });
+        </script>
     </body>
 </html>

@@ -1,23 +1,25 @@
 <html>
 <head>
-    <title>Lol</title>
+    <title>Switter</title>
     <meta charset="utf8_general_ci">
     <link href="css/style.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+    <script src="http://logotipiwe/Jquery.js"></script>
     <script src="js/switterScript.js"></script>
 </head>
 <body>
     <p><a name="top"></a></p>
     <img class="FonImg" src="css/img/FonProz35.png">
-    <header><div class="containerHead">
-        <nav>
-            <ul>
-                <li><a href="Index.html">Здесь</a></li>
-                <li><a href="Index.html">Какаято</a></li>
-                <li><a href="Index.html">Шапка</a></li>
-            </ul>
-        </nav>
-    </div>
+    <header>
+        <div class="to_index">
+            <a href="Index.php">На главную</a>
+        </div>
+        <div class="log_in">
+            <?
+            if($_COOKIE['login']!='') {
+                echo "Вы вошли как ".$_COOKIE['login']." | <a href='PHPlogout.php'>Выйти</a>";
+            }
+            ?>
+        </div>
     </header> <!--Шапка-->
     
 
@@ -28,20 +30,27 @@
         </div>
     </a>    <!--Кнопка Вверх-->
     <div class="main">
-        <button id='NewPostButton' class="bar">
-           Написать
-        </button>
+        <?
+        
+        if($_COOKIE['login']!='') {
+            echo "<button id='NewPostButton' class='bar'>Написать</button>";
+        }   
+        ?>
         <div id='CPost' class="containerPost">
         </div>
         <div class="menuLine">
                 <a href="SignUp.php">
-                    <div class="menu">Вход/регистрация</div>
+                    <?
+                    if($_COOKIE['login']=='') {
+                        echo "<div class='menu'>Вход/регистрация</div>";
+                    }
+                    ?>
                 </a>
         </div>
     </div> <!--Закрытие MAIN-->
         
     <div id="lol" class="PUwindow">
-        <form class="ClassFormm" action="" method="post">
+        <form class="ClassFormm">
             <div class='formHead'>
                 Новый пост
             <img id='CloseForm' class="exit" src="css/img/exit.png">

@@ -16,6 +16,16 @@ header{
     color: aliceblue;
     font-family: cursive;
 }
+.header2{
+    position:fixed;
+    height: 50px;
+    width: 100%;
+}
+.log_in{
+    float: right;
+    font-size: 20px;
+    margin: 12px 25px 0 0;
+}
 .headText {
     font-size: 40px;
     padding-top: 80px;
