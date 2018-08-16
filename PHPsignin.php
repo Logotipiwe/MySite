@@ -12,7 +12,7 @@ if($_POST['InLogin']!="") {
     
     if($row['Password'] == $_POST['InPassword']) {
         setcookie('login',$row['Login']);
-        header('location:switter.php');
+        header('location:index.php');
     } else {back();}
     
 } else {

@@ -10,7 +10,7 @@ if($_POST['Reglogin']!='' && $_POST['Regpassword']!=''){
     if(mysqli_num_rows($res) == 0){
         $sql->query("INSERT INTO `users` (`Login`, `Password`) VALUES ('".$_POST['Reglogin']."', '".$_POST['Regpassword']."');");
         setcookie('login',$_POST['Reglogin']);
-        header("location:index.html");
+        header("location:index.php");
     } else {back();}
 } else {
     back();
