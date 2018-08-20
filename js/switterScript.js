@@ -1,7 +1,8 @@
 function PopUpShow(){
-            $("#lol").show();
-            $(document).css('overflow', 'hidden');
-                };
+    $("#lol").show();
+    $('body').css('overflow', 'hidden');
+    alert('ggg');        
+};
 function PopUpHide(){
             $("#lol").hide();
             $('#idPostText').val("");
@@ -49,7 +50,14 @@ function AjaxUse(num,id){
     PopUpHide();
 };
 
+var files;
+$("#idFile").change(function(){
+    alert('yedfp');
+});
+
 $(document).ready(function(){
+//    $("#")
+    alert('ku');
     PopUpHide();
     AjaxUse();
     

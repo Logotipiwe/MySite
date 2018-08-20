@@ -133,7 +133,7 @@ header {
     bottom: 0px;
     
     width: 724px;    
-    height: 298px;
+    height: 321px;
     
     background-color: white;
     border-radius: 15px;
@@ -160,19 +160,20 @@ header {
     
 }
 .themeName {
-    margin-right: 291px;   
     margin-bottom: 15px;
     resize:none;
 }
 .PostText{
     resize: none;
+    margin: 0 0 10px 0;
+    margin-bottom: 10px;
 }
 .PostSend {
     
-    margin-left: 50px;
-    padding: 7px;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin: 5px 0 0 50px;
+    padding: 7px 10px 7px 10px;
+/*    padding-right: 10px;*/
+/*    padding-left: 10px;*/
         
     background-color: #5B88BD;
     border-radius: 5px;

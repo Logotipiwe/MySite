@@ -48,24 +48,25 @@
                 </a>
         </div>
     </div> <!--Закрытие MAIN-->
-        
+    
     <div id="lol" class="PUwindow">
-        <form class="ClassFormm">
+        <form class="ClassFormm" enctype="multipart/form-data">
             <div class='formHead'>
                 Новый пост
-            <img id='CloseForm' class="exit" src="css/img/exit.png">
+                <img id='CloseForm' class="exit" src="css/img/exit.png">
             </div>
-            
             <hr>
-            
             <div class="formInp">
                 <textarea id='idPostName' name="name" class="themeName" rows="2" cols="87" placeholder="Тема поста" maxlength="40" autofocus></textarea>
                 
                 <textarea id='idPostText' name="PostText" class="PostText" cols="87" rows="6" placeholder="Введите текст..." maxlength="400"></textarea>
+                
+                <input id='idFile' type="file" name='image'>
                             
             </div>
             
         <input type="button" id='idPostSend' name="done" class="PostSend" value="Отправить">
+        <input type="button" id='test' name="done" class="PostSend" value="test">
             
         </form>
         

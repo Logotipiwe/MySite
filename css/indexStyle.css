@@ -26,6 +26,9 @@ header{
     font-size: 20px;
     margin: 12px 25px 0 0;
 }
+.log_in a {
+    text-decoration: underline;
+}
 .headText {
     font-size: 40px;
     padding-top: 80px;
@@ -50,7 +53,7 @@ main {
 }
 main ul {
     list-style: none;
-    margin: 0 0 0 160px
+    margin: 200px 0 0 160px;
 }
 main ul li {
     margin: 20px 0px 0px 0;
@@ -61,13 +64,11 @@ main ul li {
 main ul li:hover {
     box-shadow: 0 0 3px black;
 }
-.name {
+h2 {
     font-size: 25px;
     margin: 0 0 10px 0;
-    z-index: 2;
 }
 .text {
     font-size: 20px;
     padding: 0 150px 0 0;
-    z-index: 2;
 }
